@@ -42,7 +42,14 @@ header {
     position: absolute;
     top: 20px;
     left: 80px;
+    z-index: 1;
 }
+
+header img {
+    width: 200px;
+}
+
+
 
 
 
