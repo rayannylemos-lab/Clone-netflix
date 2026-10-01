@@ -6,31 +6,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Netflix</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
 
     <header>
-        <img src="../img/logo.png" alt="Logo Netflix">
+       <img src="../img/logo.png" alt="Logo">
+
+        <div class="açoes">
+          <select>
+             <option>Português</option>
+             <option>English</option>
+          </select>
+
+            <button>Entrar</button>
+        </div>
+
     </header>
 
     <main>
 
         <section class="login">
 
-            <h1>Entrar</h1>
 
             <form>
 
-                <h2>Sucessos que você só encontra aqui</h2>
+                <h2>Entretenimento para<br>
+                    todos os momentos
+                </h2>
 
                 <h3>A partir de R$ 20,90. Cancele quando quiser.</h3>
 
-                <label for="email">E-mail</label>
+                <label for="email"></label>
                 <input type="email" id="email" name="email" placeholder="E-mail">
 
-                <label for="senha">Senha</label>
+                <label for="senha"></label>
                 <input type="password" id="senha" name="senha" placeholder="Senha">
 
                 <a href="profiles.html" class="botao">Vamos Lá</a>
