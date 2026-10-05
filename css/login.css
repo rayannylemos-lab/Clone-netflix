@@ -74,6 +74,7 @@ h3 {
     margin-bottom: 30px;
     text-align: center;
 }
+
 input {
     width: 300px;
     height: 50px;
@@ -92,21 +93,61 @@ input:focus {
 }
  
 label {
-    align-self: flex-start;
     margin-bottom: 5px;
     font-size: 14px;
     color: var(--cinza-claro);
 }
 
-form button {
+.lembrar {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.botao {
     width: 90px;
     height: 40px;
     background-color: var(--vermelho);
     color: var(--branco);
-    border: none;
+    text-decoration: none;
     border-radius: 4px;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
-    transition: 0.3s;
+    line-height: 40px;
+    margin-bottom: 15px;
 }
 
+input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+form > a:not(.botao) {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+form p {
+    font-size: 14px;
+    color: var(--cinza-claro);
+    text-align: center;
+}
+
+form p a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+form p {
+    margin-top: 10px;
+}
