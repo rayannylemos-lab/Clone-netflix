@@ -48,6 +48,27 @@ header img {
     width: 200px;
 }
 
+.açoes {
+    display: flex;
+    align-items: center;
+}
+
+.açoes select {
+    width: 120px;
+    height: 40px;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: 1px solid var(--branco);
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.açoes select:focus {
+    outline: none;
+    border-color: var(--branco);
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -103,6 +124,7 @@ label {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 15px;
 }
 
 .botao {
@@ -115,15 +137,20 @@ label {
     font-size: 16px;
     display: flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
-    line-height: 40px;
     margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    opacity: 0.8;
 }
 
 input[type="checkbox"] {
     width: auto;
     height: auto;
-    margin-right: 5px;
+    margin: 0;
 }
 
 form > a:not(.botao) {
@@ -137,7 +164,10 @@ form p {
     font-size: 14px;
     color: var(--cinza-claro);
     text-align: center;
+    gap: 5px;
+    margin-bottom: 15px;
 }
+
 
 form p a {
     color: var(--branco);
@@ -146,8 +176,4 @@ form p a {
 
 form p a:hover {
     text-decoration: underline;
-}
-
-form p {
-    margin-top: 10px;
 }
