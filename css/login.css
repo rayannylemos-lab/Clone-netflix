@@ -10,6 +10,7 @@
     --cinza: #5f5e5e;
     --preto: #000000;
     --cinza-claro: #888787;
+    --cinza-escuroo: #333333;
 }
 
 body {
@@ -28,7 +29,7 @@ body::before {
     width: 100%;
     height: 100%;
     background-color: var(--preto);
-    opacity: 0.70;
+    opacity: 0.85;
     z-index: -1;
 }
 
@@ -40,7 +41,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 0 180px;
 }
 
     
@@ -54,9 +55,9 @@ header img {
 }
 
 .açoes select {
-    width: 120px;
+    width: 150px;
     height: 40px;
-    background-color: var(--preto);
+    background-color: var(--cinza-escuro);
     color: var(--branco);
     border: 1px solid var(--branco);
     border-radius: 4px;
@@ -69,10 +70,22 @@ header img {
     border-color: var(--branco);
 }
 
+.açoes select option {
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+.entrar {
+    margin: 15px;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
 }
 
@@ -86,55 +99,61 @@ form {
 
 h2 {
     font-size: 75px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
 h3 { 
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 15px;
+    margin-bottom: 17px;
     text-align: center;
 }
 
 input {
-    width: 300px;
+    width: 420px;
     height: 50px;
-    background-color: var(--cinza);
+    background-color: var(--cinza-escuro);
     color: var(--branco);
     border: none;
     border-radius: 4px;
     padding: 0 15px;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 15px;
+}
+
+.login-acoes {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.login-acoes input {
+    background-color: rgba(30, 30, 30, 0.75);
+    backdrop-filter: blur(5px);
+    color: var(--branco);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 input:focus {
     outline: none;
-    box-shadow: 0 0 5px var(--vermelho);
+    box-shadow: 0 0 5px var(--branco);
 }
  
-label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: var(--cinza-claro);
-}
-
-.lembrar {
-    align-self: center;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 15px;
-}
-
 .botao {
-    width: 90px;
-    height: 40px;
+    width: 160px;
+    height: 50px;
     background-color: var(--vermelho);
     color: var(--branco);
     text-decoration: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,12 +164,6 @@ label {
 
 .botao:hover {
     opacity: 0.8;
-}
-
-input[type="checkbox"] {
-    width: auto;
-    height: auto;
-    margin: 0;
 }
 
 form > a:not(.botao) {
@@ -168,7 +181,6 @@ form p {
     margin-bottom: 15px;
 }
 
-
 form p a {
     color: var(--branco);
     text-decoration: none;
@@ -176,4 +188,59 @@ form p a {
 
 form p a:hover {
     text-decoration: underline;
+    background-color: var(--preto);
+}
+
+.conteudo-netflix {
+    width: 100%;
+    background-color: var(--preto);
+    padding: 40px 60px;
+}
+
+.aviso-assinatura {
+    margin-bottom: 40px;
+    background-color: var(--cinza-escuroo);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.em-alta {
+    margin-bottom: 50px;
+}
+
+.filmes {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.filme {
+    position: relative;
+}
+
+.filme img {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.filme span {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.filme:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.motivos h2 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 25px;
 }
