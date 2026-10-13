@@ -11,6 +11,7 @@
     --preto: #000000;
     --cinza-claro: #888787;
     --cinza-escuroo: #333333;
+    --roxo-claro: #762cff7a;
 }
 
 body {
@@ -195,24 +196,72 @@ form p a:hover {
     width: 100%;
     background-color: var(--preto);
     padding: 40px 60px;
+    border-top: 5px solid #8b1a35;
+    border-radius: 50% 50% 0 0 / 60px 60px 0 0;
+    margin-top: -30px;
+    position: relative;
 }
 
 .aviso-assinatura {
-    margin-bottom: 40px;
-    background-color: var(--cinza-escuroo);
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    background: linear-gradient(100deg, #29152f, #171b43);
+    padding: 12px 20px;
+    border-radius: 12px;
 }
 
+.pipoca {
+    font-size: 45px;
+}
+
+.texto-assinatura {
+    flex-grow: 1;
+}
+
+.texto-assinatura h3 {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.texto-assinatura p {
+    font-size: 14px;
+}
+
+.saiba-mais {
+    background-color: #414258;
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
 .em-alta {
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+}
+
+.em-alta h2 {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 25px;
 }
 
 .filmes {
     display: flex;
+    justify-content: center;
     align-items: flex-start;
     gap: 15px;
+    width: 100%;
 }
 
 .filme {
@@ -220,10 +269,9 @@ form p a:hover {
 }
 
 .filme img {
-    width: 200px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 4px;
+    width: 190px;
+    height: 270px;
+    border-radius: 6px;
 }
 
 .filme span {
