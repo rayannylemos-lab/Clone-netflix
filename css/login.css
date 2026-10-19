@@ -207,12 +207,12 @@ form p a:hover {
 .aviso-assinatura {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto 40px;
     background: linear-gradient(100deg, #29152f, #171b43);
-    padding: 12px 20px;
+    padding: 12px 30px;
     border-radius: 12px;
 }
 
@@ -263,7 +263,6 @@ form p a:hover {
     white-space: nowrap;
 }
 
-
 .em-alta {
     width: 100%;
     max-width: 1200px;
@@ -278,10 +277,17 @@ form p a:hover {
 
 .filmes {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 18px;
     width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--cinza) transparent;
+    anchor-name: --carrossel;
 }
 
 .filme {
@@ -290,6 +296,7 @@ form p a:hover {
     height: 300px;
     flex-shrink: 0;
     overflow: visible;
+    scroll-snap-align: start;
 }
 
 .filme img {
@@ -301,7 +308,7 @@ form p a:hover {
 .filme span {
     position: absolute;
     bottom: 45px;
-    left: -22px;
+    left: -19px;
     font-size: 100px;
     font-weight: bold;
     color: var(--preto);
@@ -433,3 +440,48 @@ form p a:hover {
     line-height: 1.5;
 }
 
+.filmes::scroll-button(*) {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--branco-claro);
+    border-radius: 50%;
+    background-color: rgba(20, 20, 20, 0.85);
+    color: var(--branco);
+    font-size: 32px;
+    cursor: pointer;
+    transition: background-color 0.10s ease;
+}
+
+.filmes::scroll-button(*):hover {
+    background-color: var(--cinza);
+}
+
+.filmes::scroll-button(*):disabled {
+    visibility: hidden;
+}
+
+.filmes::scroll-button(left) {
+    content: "‹";
+    position: absolute;
+    position-anchor: --carrossel;
+    top: anchor(center);
+    left: anchor(left);
+    translate: 0 -50%;
+}
+
+.filmes::scroll-button(right) {
+    content: "›";
+    position: absolute;
+    position-anchor: --carrossel;
+    top: anchor(center);
+    left: anchor(right);
+    translate: -100% -50%;
+}
+
+.filmes {
+    scrollbar-width: none;
+}
+
+.filmes::-webkit-scrollbar {
+    display: none;
+}
