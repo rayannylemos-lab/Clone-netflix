@@ -18,8 +18,10 @@
 body {
     min-height: 100vh;
     background-image: url(../img/fundoo.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: var(--preto);
     color: var(--branco);
     font-family: Arial, sans-serif;
 }
@@ -281,13 +283,6 @@ form p a:hover {
     align-items: flex-start;
     gap: 18px;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x proximity;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-    scrollbar-color: var(--cinza) transparent;
-    anchor-name: --carrossel;
 }
 
 .filme {
@@ -440,48 +435,70 @@ form p a:hover {
     line-height: 1.5;
 }
 
-.filmes::scroll-button(*) {
-    width: 48px;
-    height: 48px;
-    border: 1px solid var(--branco-claro);
-    border-radius: 50%;
-    background-color: rgba(20, 20, 20, 0.85);
+.perguntas form {
+    min-height: auto;
+    margin-top: 50px;
+}
+
+.perguntas form h4 {
+    margin-bottom: 17px;
+}
+
+.perguntas .login-acoes {
+    margin-top: 0;
+    gap: 10px;
+}
+
+.perguntas .login-acoes input {
+    width: 600px;
+    height: 55px;
+}
+
+.perguntas .login-acoes .botao {
+    width: 210px;
+    height: 55px;
+    font-size: 25px;
+}
+
+.rodape {
+    background-color: var(--preto);
+    padding: 25px 12%;
+    color: var(--cinza-claro);
+    font-size: 14px;
+}
+
+.contato-rodape {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.links-rodape {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px 30px;
+    margin-bottom: 35px;
+}
+
+.links-rodape a {
+    color: var(--cinza-claro);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.links-rodape a:hover {
     color: var(--branco);
-    font-size: 32px;
+}
+
+.idioma-rodape {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.10s ease;
 }
 
-.filmes::scroll-button(*):hover {
-    background-color: var(--cinza);
-}
-
-.filmes::scroll-button(*):disabled {
-    visibility: hidden;
-}
-
-.filmes::scroll-button(left) {
-    content: "‹";
-    position: absolute;
-    position-anchor: --carrossel;
-    top: anchor(center);
-    left: anchor(left);
-    translate: 0 -50%;
-}
-
-.filmes::scroll-button(right) {
-    content: "›";
-    position: absolute;
-    position-anchor: --carrossel;
-    top: anchor(center);
-    left: anchor(right);
-    translate: -100% -50%;
-}
-
-.filmes {
-    scrollbar-width: none;
-}
-
-.filmes::-webkit-scrollbar {
-    display: none;
+.pais-rodape {
+    margin-top: 25px;
 }
