@@ -80,6 +80,7 @@ nav a:hover {
     transition: 0.3s;
 }
 
+
 .hero {
     position: relative;
     min-height: 80vh;
@@ -87,22 +88,42 @@ nav a:hover {
     align-items: center;
     padding: 60px;
     overflow: hidden;
+    background-color: var(--preto);
 }
 
-.hero-content img {
+.hero-image {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 65%;
-    height: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     z-index: 0;
 }
 
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.7) 35%,
+        rgba(0, 0, 0, 0.15) 75%,
+        transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 600px;
-    background-image: url(https://www.gazetadopovo.com.br/economia/nova-economia/netflix-tem-categorias-ocultas-e-filmes-que-voce-nunca-ve-veja-como-encontra-los-341j172hltmqgdnzylf0dhukb/);
 }
 
 .hero-content h1 {
@@ -138,7 +159,8 @@ nav a:hover {
 .hero-buttons button:hover {
     opacity: 0.8;
     transform: scale(1.03);
-} 
+}
+
 
 .categorias h2 {
     font-size: 28px;

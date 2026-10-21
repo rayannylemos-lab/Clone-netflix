@@ -15,13 +15,17 @@
         <img src="../img/logo.png" alt="Logo">
 
         <div class="açoes">
-            <select>
-                <option>Português</option>
-                <option>English</option>
-            </select>
+            <div class="seletor-idioma">
+             <img src="../img/idiomas.png" alt="">
 
-            <a href="login.html" class="entrar">Entrar</a>
-        </div>
+              <select>
+                 <option>Português</option>
+                 <option>English</option>
+              </select>
+            </div>
+
+             <a href="login.html" class="entrar">Entrar</a>
+        </div>    
     </header>
 
     <main>
@@ -34,13 +38,17 @@
                     todos os momentos
                 </h2>
 
-                <h3>A partir de R$ 20,90. Cancele quando quiser.</h3>
+                <h3>A partir de R$ 25,90. Cancele quando quiser.</h3>
 
                 <h4>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</h4>
 
                 <div class="login-acoes">
-                    <input type="email" id="email" name="email" placeholder="E-mail">
-                    <a href="profiles.html" class="botao"> Vamos Lá ❯ </a>
+                   <div class="campo-email">
+                     <input type="email" id="email" name="email" placeholder=" "required>
+                     <label for="email">E-mail</label>
+                   </div>
+
+                    <a href="profiles.html" class="botao">Vamos Lá ❯</a>
                 </div>
 
             </form>
@@ -271,10 +279,13 @@
          <a href="#">Só na Netflix</a>
         </div>
 
-       <select class="idioma-rodape">
-         <option value="pt-BR">Português</option>
-         <option value="en">English</option>
-      </select>
+       <div class="seletor-idioma idioma-rodape-container">
+            <img src="../img/idiomas.png" alt="">
+            <select class="idioma-rodape">
+               <option>Português</option>
+               <option>English</option>
+            </select>
+        </div>
 
       <p class="pais-rodape">Netflix Brasil</p>
 
