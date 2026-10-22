@@ -22,12 +22,16 @@ body {
 
 header {
     display: flex;
-    top: 2px;
+    position: fixed;
+    top: 0%;
     left: 0;
     width: 100%;
     align-items: center;
     gap: 30px;
-    padding: 0 60px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: var(--cinza-escuro);
 }
 
 header img {
@@ -83,7 +87,8 @@ nav a:hover {
 
 .hero {
     position: relative;
-    min-height: 80vh;
+    min-height: 83vh;
+    margin-top: 73px;
     display: flex;
     align-items: center;
     padding: 60px;
@@ -240,3 +245,51 @@ footer a:hover {
     color: var(--branco);
     opacity: 0.8;
 }
+
+.perfil-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.perfil-menu details {
+    position: relative;
+}
+
+.perfil-menu summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.perfil-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.perfil-menu summary::after {
+    content: "▼";
+    color: var(--branco);
+    font-size: 12px;
+}
+
+.menu-sair {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 9px;
+    padding: 7px 11px;
+    background-color: var(--preto);
+    border: 1px solid var(--cinza);
+    white-space: nowrap;
+    z-index: 1001;
+}
+
+.menu-sair a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-sair a:hover {
+    text-decoration: underline;
+}
+

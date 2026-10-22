@@ -161,9 +161,12 @@ input {
     padding: 15px 15px 0;
     background-color: rgba(30, 30, 30, 0.75);
     backdrop-filter: blur(5px);
-    color: var(--branco);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+}
+
+.campo-email input:focus {
+    border: 3px solid var(--branco);
+    outline: none;
+    box-shadow: none;
 }
 
 .campo-email label {
@@ -197,12 +200,6 @@ input {
     color: var(--branco);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-input:focus {
-    outline: none;
-    box-shadow: 0 0 5px var(--branco);
-}
-
  
 .botao {
     width: 160px;
@@ -506,20 +503,33 @@ form p a:hover {
 
 .perguntas .login-acoes {
     margin-top: 0;
-    gap: 10px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.perguntas .login-acoes .campo-email {
+    width: 600px;
+    flex: 1;
+    min-width: 0;
 }
 
 .perguntas .login-acoes input {
-    width: 600px;
-    height: 55px;
+    width: 100%;
+    height: 56px;
     margin-bottom: 0;
+    flex: 1;
+    min-width: 0;
+    
 }
 
 .perguntas .login-acoes .botao {
     width: 210px;
-    height: 55px;
+    height: 56px;
     font-size: 25px;
     margin-bottom: 0;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 .rodape {
@@ -571,4 +581,23 @@ form p a:hover {
 .idioma-rodape-container img {
     top: 20px;
     transform: none;
+}
+
+.brilho-roxo {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 75%;
+    height: 65px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse 65% 100% at 50% 0%,
+      rgba(48, 58, 160, 0.38) 0%,
+      rgba(66, 40, 130, 0.24) 40%,
+      rgba(45, 25, 90, 0.10) 65%,
+      transparent 100%
+);
+    pointer-events: none;
+    z-index: 0;
 }
