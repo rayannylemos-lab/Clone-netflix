@@ -268,10 +268,12 @@ form p a:hover {
     padding: 12px 30px;
     border-radius: 12px;
 }
+.aviso-assinatura {
+    transition: filter 0.3s ease;
+}
 
-.aviso-assinatura:hover {
-    filter: brightness(1.3);
-    transition: 0.3s ease;
+.aviso-assinatura:hover:not(:has(.saiba-mais:hover)) {
+    filter: brightness(1.15);
 }
 
 .aviso-container {
@@ -321,6 +323,13 @@ form p a:hover {
     white-space: nowrap;
 }
 
+.saiba-mais {
+    transition: color 0.3s ease;
+}
+
+.saiba-mais:hover {
+    color: var(--cinza-claro);
+}
 .em-alta {
     width: 100%;
     max-width: 1200px;
@@ -510,6 +519,7 @@ form p a:hover {
 
 .perguntas .login-acoes .campo-email {
     width: 600px;
+    height: 56px;
     flex: 1;
     min-width: 0;
 }
@@ -520,7 +530,8 @@ form p a:hover {
     margin-bottom: 0;
     flex: 1;
     min-width: 0;
-    
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 
 .perguntas .login-acoes .botao {
@@ -530,6 +541,7 @@ form p a:hover {
     margin-bottom: 0;
     flex-shrink: 0;
     align-self: center;
+    box-sizing: border-box;
 }
 
 .rodape {

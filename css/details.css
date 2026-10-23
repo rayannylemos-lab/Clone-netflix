@@ -23,24 +23,29 @@ body {
 header {
     display: flex;
     position: fixed;
-    top: 0%;
+    top: 0;
     left: 0;
     width: 100%;
     align-items: center;
     gap: 30px;
     padding: 0 60px;
-    box-sizing: border-box;
     z-index: 1000;
     background-color: var(--cinza-escuro);
 }
 
 header img {
     width: 200px;
-    
 }
 
-main {
-   width: 100%;
+header img:first-child {
+    width: 200px;
+}
+
+header img:last-child {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    object-fit: cover;
 }
 
 nav {
@@ -56,30 +61,110 @@ nav a {
     transition: 0.3s;
 }
 
+
 nav a:hover {
     opacity: 0.8;
-}
-
-.pesquisa {
-    margin-left: auto;
-    font-size: 40px;
-    cursor: pointer;
-    transform: scaleX(-1);
-}
-
-.notificacao {
-    font-size: 33px;
-    cursor: pointer;
-    filter: grayscale(1) brightness(0) invert(1);
-}
-
-.perfil {
-    width: 45px;
-    height: 45px;
-    border-radius: 4px;
 }
 
 .perfil:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+.informacoes {
+    padding: 40px 60px;
+    background-color: var(--cinza-escuro);
+}
+
+
+.informacoes h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.informacoes h3 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+}
+
+
+.informacoes img {
+    width: 220px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+
+.informacoes p {
+    max-width: 850px;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: var(--branco);
+}
+
+.informacoes strong {
+    color: var(--cinza-claro);
+    margin-right: 8px;
+}
+
+.recomendacoes {
+    padding: 40px 60px;
+    background-color: var(--cinza-escuro);
+}
+
+.recomendacoes h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.filmes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 15px;
+    margin: 0 -15px;
+}
+
+.filmes::-webkit-scrollbar {
+    display: none;
+}
+
+.filme {
+    flex-shrink: 0;
+    width: 286px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.filme img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.filme h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 40px 60px;
+    background-color: var(--preto);
+    color: var(--cinza-claro);
+}
+
+.redes-sociais,
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 20px;
 }
