@@ -61,9 +61,71 @@ nav a {
     transition: 0.3s;
 }
 
-
 nav a:hover {
     opacity: 0.8;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    min-height: 450px;
+    margin-top: 70px;
+    padding: 35px 45px;
+
+    background-image:
+        linear-gradient(
+            to top,
+            var(--cinza-escuro) 0%,
+            rgba(28, 28, 28, 0.5) 40%,
+            transparent 100%
+        ),
+        url("../img/filme1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botoes a {
+    padding: 12px 24px;
+    background-color: var(--cinza);
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.botoes a:first-child {
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.botoes a:hover {
+    opacity: 0.8;
+}
+
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 650px;
+    margin-bottom: 15px;
 }
 
 .perfil:hover {
@@ -86,7 +148,6 @@ nav a:hover {
     font-size: 22px;
     margin: 20px 0 10px;
 }
-
 
 .informacoes img {
     width: 220px;

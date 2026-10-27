@@ -344,11 +344,9 @@ form p a:hover {
 
 .filmes {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 18px;
-    width: 100%;
-    padding-left: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .filme {
@@ -357,7 +355,6 @@ form p a:hover {
     height: 300px;
     flex-shrink: 0;
     overflow: visible;
-    scroll-snap-align: start;
 }
 
 .filme img {
