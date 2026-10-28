@@ -20,212 +20,236 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    align-items: center;
-    gap: 30px;
-    padding: 0 60px;
-    z-index: 1000;
+.pagina-detalhes {
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+.painel-detalhes {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
     background-color: var(--cinza-escuro);
-}
-
-header img {
-    width: 200px;
-}
-
-header img:first-child {
-    width: 200px;
-}
-
-header img:last-child {
-    width: 45px;
-    height: 45px;
-    border-radius: 4px;
-    object-fit: cover;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-nav a {
-    color: var(--branco);
-    text-decoration: none;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    opacity: 0.8;
+    border-radius: 10px;
 }
 
 .banner {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-
-    min-height: 450px;
-    margin-top: 70px;
-    padding: 35px 45px;
-
+    align-items: flex-end;
+    min-height: 500px;
+    padding: 35px;
     background-image:
         linear-gradient(
             to top,
             var(--cinza-escuro) 0%,
-            rgba(28, 28, 28, 0.5) 40%,
+            rgba(28, 28, 28, 0.3) 55%,
             transparent 100%
         ),
         url("../img/filme1.jpg");
-
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .botoes {
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .botoes a {
-    padding: 12px 24px;
+    display: inline-block;
+    padding: 12px 22px;
     background-color: var(--cinza);
     color: var(--branco);
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
     border-radius: 4px;
-    transition: 0.3s;
-}
-
-.botoes a:first-child {
-    background-color: var(--branco);
-    color: var(--preto);
+    transition: opacity 0.3s ease;
 }
 
 .botoes a:hover {
     opacity: 0.8;
 }
 
-
-.banner h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.banner p {
-    font-size: 18px;
-    line-height: 1.5;
-    max-width: 650px;
-    margin-bottom: 15px;
-}
-
-.perfil:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
 .informacoes {
-    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 25px 35px;
     background-color: var(--cinza-escuro);
 }
 
-
-.informacoes h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
+.informacoes-principais,
+.informacoes-secundarias {
+    min-width: 0;
 }
-
-.informacoes h3 {
-    font-size: 22px;
-    margin: 20px 0 10px;
-}
-
-.informacoes img {
-    width: 220px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    object-fit: cover;
-}
-
 
 .informacoes p {
-    max-width: 850px;
-    font-size: 17px;
-    line-height: 1.6;
-    margin-bottom: 18px;
-    color: var(--branco);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .informacoes strong {
     color: var(--cinza-claro);
-    margin-right: 8px;
+    font-weight: normal;
+}
+
+.episodios {
+    padding: 10px 35px 30px;
+    background-color: var(--cinza-escuro);
+}
+
+.episodios-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.episodios-cabecalho h2 {
+    font-size: 22px;
+}
+
+.episodios-cabecalho select {
+    padding: 10px 14px;
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.temporada-info {
+    color: var(--cinza-claro);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.episodio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid var(--cinza);
+}
+
+.numero-episodio {
+    width: 25px;
+    text-align: center;
+    color: var(--cinza-claro);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.episodio img {
+    width: 130px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.episodio-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.episodio-texto h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.episodio-texto p {
+    color: var(--cinza-claro);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.duracao-episodio {
+    color: var(--cinza-claro);
+    font-size: 14px;
+    flex-shrink: 0;
 }
 
 .recomendacoes {
-    padding: 40px 60px;
+    padding: 25px 35px 35px;
     background-color: var(--cinza-escuro);
 }
 
 .recomendacoes h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 18px;
 }
 
 .filmes {
     display: flex;
-    gap: 20px;
+    gap: 12px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 20px 15px;
-    margin: 0 -15px;
+    padding: 5px 2px 15px;
 }
 
 .filmes::-webkit-scrollbar {
-    display: none;
+    height: 6px;
+}
+
+.filmes::-webkit-scrollbar-thumb {
+    background-color: var(--cinza);
+    border-radius: 10px;
 }
 
 .filme {
-    flex-shrink: 0;
-    width: 286px;
+    flex: 0 0 290px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
+.filme:hover {
+    transform: scale(1.04);
+}
+
 .filme img {
+    display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
-    border-radius: 8px;
+    border-radius: 5px;
 }
+
 .filme h3 {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-footer {
-    padding: 40px 60px;
-    background-color: var(--preto);
-    color: var(--cinza-claro);
-}
-
-.redes-sociais,
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 25px;
-}
-
-footer p {
     font-size: 14px;
-    margin-top: 20px;
+    font-weight: normal;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.informacoes-principais .descricao {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--branco);
+}
+
+.informacoes-secundarias p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.informacoes-secundarias strong {
+    color: var(--cinza-claro);
 }
