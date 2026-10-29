@@ -390,3 +390,179 @@ footer p {
         background-color: var(--preto);
     }
 }
+
+.janela-detalhes {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+}
+
+.janela-detalhes:target {
+    display: block;
+}
+
+.conteudo-detalhes {
+    position: relative;
+    width: 45%;
+    max-width: 1000px;
+    margin: 38px auto;
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner-detalhes {
+    min-height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 35px;
+    background-image:
+        linear-gradient(
+            to top,
+            var(--cinza-escuro),
+            transparent
+        ),
+        url("../img/filme1.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.banner-detalhes h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.banner-detalhes p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.botao-assistir {
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 22px;
+    background-color: var(--branco);
+    color: var(--preto);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.informacoes-detalhes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 25px 35px;
+    align-items: start;
+}
+
+.informacoes-detalhes p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.informacoes-detalhes strong {
+    color: var(--cinza-claro);
+    font-weight: normal;
+}
+
+.descricao-serie p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.dados-serie p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.dados-serie strong {
+    color: var(--cinza-claro);
+    font-weight: normal;
+}
+
+.descricao-serie p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.dados-serie p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.dados-serie strong {
+    color: var(--cinza-claro);
+    font-weight: normal;
+}
+
+.fechar-detalhes {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 35px;
+    line-height: 1;
+    background-color: var(--cinza-escuro);
+    border-radius: 50%;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.episodios-serie {
+    padding: 0 35px 30px;
+}
+
+.episodios-serie > h3 {
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+.episodios-serie .episodio {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--cinza);
+}
+
+.numero-episodio {
+    font-size: 28px;
+    color: var(--cinza-claro);
+    min-width: 30px;
+    text-align: center;
+}
+
+.episodio-texto h4 {
+    font-size: 17px;
+    margin: 0 0 8px;
+}
+
+.episodio-texto p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
